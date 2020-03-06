@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<navbar></navbar>
+<view class="container">
+  <view class="hint">闪卡页</view>
+
+</view>

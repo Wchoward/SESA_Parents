@@ -1,0 +1,4 @@
+/* components/navbar/navbar.wxss */
+.box{
+    border:0.3px #cbcbcb solid;
+}

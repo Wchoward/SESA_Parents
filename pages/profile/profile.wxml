@@ -1,0 +1,36 @@
+<!--pages/profile/profile.wxml-->
+<navbar></navbar>
+<view class="container-profile">
+  <view class="userinfo">
+    <button id = "login-btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      微信登录
+    </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+<view class="fun-btns">
+  <view class="t9">信息绑定</view>
+  <view class="fun-item center"></view>
+  <view class="fun-item">
+    <image id="next" src="../../icons/next.png"></image>
+  </view>
+</view>
+<view class="fun-btns" bindtap="daka">
+  <view class="t9">每日打卡</view>
+  <view class="fun-item center"></view>
+  <view class="fun-item">
+    <image id="next" src="../../icons/next.png"></image>
+  </view>
+</view>
+<view class="fun-btns">
+  <view class="t9">意见反馈</view>
+  <view class="fun-item center"></view>
+  <view class="fun-item">
+    <image id="next" src="../../icons/next.png"></image>
+  </view>
+</view>
+
+</view>

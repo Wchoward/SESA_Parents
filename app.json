@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/browse/index",
+    "pages/check/index",
+    "pages/audio/index",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#ce9637",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "闪卡",
+      "iconPath": "icons/flash.png",
+      "selectedIconPath": "icons/flash-st.png"
+    },{
+      "pagePath": "pages/browse/index",
+      "text": "教练评语",
+      "iconPath": "icons/message.png",
+      "selectedIconPath": "icons/message-st.png"
+    },{
+      "pagePath": "pages/audio/index",
+      "text": "听读",
+      "iconPath": "icons/mp3.png",
+      "selectedIconPath": "icons/mp3-st.png"
+    },{
+      "pagePath": "pages/profile/profile",
+      "text": "我的",
+      "iconPath": "icons/profile.png",
+      "selectedIconPath": "icons/profile-st.png"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

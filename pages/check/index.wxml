@@ -1,0 +1,5 @@
+<!--pages/check/index.wxml-->
+<navbar></navbar>
+<view class="container">
+    <view class="hint">打卡页</view>
+</view>
