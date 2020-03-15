@@ -108,7 +108,7 @@ git flow feature start check develop
 
 3. push到远程自己的feature分支（如`origin/feature/check`）（管理人员会经常检查，以便进行进度监控与管理）
 
-4. push之前进行一次pull develop分支操作！保持自己push上去的feature分支是基于最新的develop分支版本的！！！
+4. 注意微信群的通知，如果收到版本更新的通知，要进行develop分支的更新并把它合并到自己的feature分支。
 
    ```bash
    git checkout develop
