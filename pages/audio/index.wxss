@@ -1,8 +1,0 @@
-/* pages/audio/index.wxss */
-.hint{
-  font-size: large;
-  display: flex;
-  align-items: center;
-  align-content: center;
-  color: #707070;
-}

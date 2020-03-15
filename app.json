@@ -3,7 +3,6 @@
     "pages/index/index",
     "pages/browse/index",
     "pages/check/index",
-    "pages/audio/index",
     "pages/profile/profile"
   ],
   "window": {
@@ -22,14 +21,14 @@
       "selectedIconPath": "icons/flash-st.png"
     },{
       "pagePath": "pages/browse/index",
-      "text": "教练评语",
+      "text": "班级",
       "iconPath": "icons/message.png",
       "selectedIconPath": "icons/message-st.png"
     },{
-      "pagePath": "pages/audio/index",
-      "text": "听读",
-      "iconPath": "icons/mp3.png",
-      "selectedIconPath": "icons/mp3-st.png"
+      "pagePath": "pages/check/index",
+      "text": "打卡",
+      "iconPath": "icons/daka.png",
+      "selectedIconPath": "icons/daka-st.png"
     },{
       "pagePath": "pages/profile/profile",
       "text": "我的",

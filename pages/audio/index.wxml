@@ -1,5 +1,0 @@
-<!--pages/audio/index.wxml-->
-<navbar></navbar>
-<view class="container">
-    <view class="hint">听读材料页</view>
-</view>
