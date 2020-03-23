@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/browse/index",
     "pages/check/index",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/login/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

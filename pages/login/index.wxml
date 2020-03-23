@@ -1,0 +1,20 @@
+<!--pages/login/index.wxml-->
+<navbar></navbar>
+<view  class="container-login">
+    
+    <view class="banner">
+        <image class = "img" mode="widthFix" src = "../../icons/banner.png" />
+    </view>
+    <view class="fun-btns">
+        <text>账号</text>
+        <input bindinput="inputNum" value="{{account}}"/>
+    </view>
+    <view class="fun-btns">
+        <text>密码</text>
+        <input bindinput="inputPsw"  password="true" placeholder = "请输入密码" value="{{password}}"/>
+    </view>
+    <view >
+        <button id="login-btn" bindtap = "login">登录</button>
+    </view>
+
+</view>
