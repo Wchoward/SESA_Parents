@@ -1,6 +1,20 @@
 <!--index.wxml-->
 <navbar></navbar>
-<view class="container">
-  <view class="hint">闪卡页</view>
-
+<view class="divLine"></view>
+<view class="buttonBarStyle">
+  <button style="width: 40%; height: 90%;">
+    添加新词
+  </button>
+  <button style="width: 40%; height: 90%" >
+    复习检测
+  </button>
+</view>
+<view class="divLine"></view>
+<view class="buttonBarStyle">
+  共{{word.length}}词
+</view>
+<view >
+  <block wx:for="{{word}}" wx:key="index">
+  <view class="text-content">{{item}}</view> 
+  </block>
 </view>
