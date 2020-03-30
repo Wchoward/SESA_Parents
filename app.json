@@ -4,7 +4,8 @@
     "pages/browse/index",
     "pages/check/index",
     "pages/audio/index",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/index/revise"
   ],
   "window": {
     "backgroundTextStyle": "light",

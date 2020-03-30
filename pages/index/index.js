@@ -47,6 +47,11 @@ Page({
       })
     }
   },
+  gotoPageRevise: function(param){
+    wx.navigateTo({
+      url: '/pages/index/revise',
+    })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

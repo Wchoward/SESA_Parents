@@ -1,0 +1,13 @@
+<!--pages/index/revise.wxml-->
+<view class="card-container">
+  <view class="app-card">
+    <view class="word">revise</view>
+    <text>\n\n</text>
+    <image src="/icons/revise.png" mode="aspectFit" class="image-container"></image>
+  </view>
+  <view class="ok">
+    <button class='myButton1'>记住了</button>
+    <button class='myButton2'>模糊</button>
+    <button class='myButton3'>忘了</button>
+  </view>
+</view>
