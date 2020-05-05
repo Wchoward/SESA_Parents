@@ -52,6 +52,36 @@ Page({
       url: '/pages/index/revise',
     })
   },
+  gotoPageSetAmount: function(param){
+    wx.navigateTo({
+      url: '/pages/index/setAmount',
+    })
+  },
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+    // getList(this);
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+    // getList(this);
+  },
+  inputTyping: function (e) {
+    //搜索数据
+    // getList(this, e.detail.value);
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

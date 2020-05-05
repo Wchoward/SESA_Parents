@@ -1,11 +1,16 @@
 <!--pages/index/revise.wxml-->
 <view class="card-container">
-  <view class="app-card">
-    <view class="word">revise</view>
-    <text>\n\n</text>
-    <image src="/icons/revise.png" mode="aspectFit" class="image-container"></image>
+  <view class="card" data-id="1" bindtap="rotateFn" animation="{{animation1}}">
+    <view class="word">abandon</view>
+    <button><image style="height:25px;width:35px;" src="/icons/listen-button.png" 
+      mode="scaleToFill" bindtap="audio_pass"></image></button>
+    <!-- <image src="/icons/revise.png" mode="aspectFit" class="image-container"></image> -->
+    <!-- <button class="reverseButton" bindtap="rotateFn">翻面</button> -->
   </view>
-  <view class="ok">
+  <view class="card card2" bindtap="rotateFn" animation="{{animation2}}">
+    <image style="width:50%;height:30%;" src="/icons/abandon.png"></image>
+  </view>
+  <view class="button_container">
     <button class='myButton1'>记住了</button>
     <button class='myButton2'>模糊</button>
     <button class='myButton3'>忘了</button>

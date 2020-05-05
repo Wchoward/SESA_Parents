@@ -4,7 +4,8 @@
     "pages/browse/index",
     "pages/check/index",
     "pages/profile/profile",
-    "pages/index/revise"
+    "pages/index/revise",
+    "pages/index/setAmount"
   ],
   "window": {
     "backgroundTextStyle": "light",

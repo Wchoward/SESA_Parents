@@ -1,0 +1,14 @@
+/* pages/index/setAmount.wxss */
+.set
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width:100%;
+  height:80rpx;
+  background-color:whitesmoke;
+  /* margin-top: 5%; */
+  border:1rpx solid whitesmoke;
+  border-radius: 5rpx;
+}
