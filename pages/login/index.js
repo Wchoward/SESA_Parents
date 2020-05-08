@@ -76,7 +76,7 @@ Page({
     })
   },
   login:function(){
-    if (this.data.password == "") {
+    if (!this.data.password || this.data.password == "") {
       wx.showToast({
         title: '请输入密码',
         icon: 'none',
@@ -85,7 +85,7 @@ Page({
         mask: true
       })
     }
-    else if(this.data.account==""){
+    else if (!this.data.account || this.data.account==""){
       wx.showToast({
         title: '账号不能为空',
         icon: 'none',
