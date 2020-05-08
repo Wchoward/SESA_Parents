@@ -1,10 +1,11 @@
 // pages/browse/index.js
 Page({
-    
+     
     /**
     * 页面的初始数据
     */
     data: {
+        currTab : 0,
         check_lst:[{
             usr_name:'李小绿',
             create_time:'2020-05-07 20:21:25',
@@ -44,8 +45,8 @@ Page({
               time: 60,
               content: '影视观看'
             }],
-            self_comment: '孩子很喜欢哈利波特，看了1个小时呢！',
-            instruction: '看的时候可以跟着一起读，锻炼口语哦～',
+            self_comment: '孩子很喜欢哈利波特！',
+            instruction: '跟着一起读，可以锻炼口语哦～',
           },
         ]
     },
@@ -104,5 +105,24 @@ Page({
     */
     onShareAppMessage: function () {
         
+    },
+    activeTab: function (e) {
+        if (e.target.id === 'all') {
+            this.setData({
+                currTab: 0
+            })
+            console.log(1)
+        }
+        else {
+            this.setData({
+                currTab: 1
+            })
+            console.log(2)
+        }
+    },
+    go_comment: function () {
+      wx.navigateTo({
+        url: '../comment/index'
+      })
     }
 })

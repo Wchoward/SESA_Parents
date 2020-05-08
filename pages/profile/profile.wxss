@@ -50,3 +50,7 @@
   width: 12px;
   height: 12px;
 }
+
+button::after {
+  border: none;
+}

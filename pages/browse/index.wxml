@@ -1,6 +1,13 @@
 <!--pages/browse/index.wxml-->
-<navbar></navbar>
-<view class="container" >
+<view class="nav-tab">
+        <button class="tab-btn {{currTab === 0 ? 'active':''}}" id="all" bindtap="activeTab">
+        班 组
+        </button>
+        <button class="tab-btn {{currTab === 1 ? 'active':''}}" id="self" bindtap="activeTab">
+        个 人
+        </button>
+    </view >
+<scroll-view scroll-y = "true" enable-flex="true" class = "container">
   <view class="info_block" wx:for="{{check_lst}}"  wx:for-item="i">
     <view class="usr_info">
         <view class='info1'>
@@ -28,6 +35,6 @@
         <text class="title">教练评价</text>
         <text class="comments">{{i.instruction}}</text>
     </view>
-    <button class="comment">评 论</button>
+    <button class="comment" bindtap="go_comment">评 论</button>
 </view>
-</view>
+</scroll-view>

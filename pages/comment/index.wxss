@@ -15,7 +15,8 @@
     display: flex;
 } */
 .item-icon{
-  width: 10%;
+  width:64rpx;
+  height:64rpx;
 }
 #comment-btn{
   width:90%;
@@ -44,6 +45,9 @@ textarea{
 .uploadway{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
+}
+button::after {
+  border: none;
 }
