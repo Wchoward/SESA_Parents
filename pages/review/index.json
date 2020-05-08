@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "navbar": "../../components/navbar/navbar"
+  },
+  "navigationBarTitleText": "发表评论",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "backgroundTextStyle": "light"
+}
