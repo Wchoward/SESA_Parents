@@ -1,5 +1,31 @@
-<!--pages/check/index.wxml-->
-<navbar></navbar>
-<view class="container">
-    <view class="hint">打卡页</view>
+<!--pages/daka/daka.wxml-->
+<!--页面根标签-->
+<view class="content">
+	<!--pics文件夹下的background.jpg文件-->
+	<image class='background' src="/icons/background.jpg" mode="aspectFill"></image>
+	<!--页面其它部分-->
+</view>
+
+<view class="headshot">
+<image src='/icons/head.jpeg' class='avatar'></image>
+</view>
+
+<view class="nameborder">
+<view class="name">王XX</view>
+</view>
+
+<view class="content">
+  <text class="normal-word">今日，你背诵了\n</text>
+  <text class="big-word">100</text>
+  <text class="small-word">个单词\n</text>
+  <text class="normal-word">观看了\n</text>
+  <text class="big-word">5</text>
+  <text class="small-word">个视频\n</text>
+  <text class="normal-word">共学习了\n</text>
+  <text class="big-word">200</text>
+  <text class="small-word">分钟\n</text>
+</view>
+
+<view class=".button-view">
+<button bindtap="review">打卡评论</button>
 </view>

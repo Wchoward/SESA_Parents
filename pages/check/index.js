@@ -1,4 +1,4 @@
-// pages/check/index.js
+// pages/daka/daka.js
 Page({
 
   /**
@@ -56,7 +56,11 @@ Page({
   onReachBottom: function () {
 
   },
-
+  review:function() {
+    wx.navigateTo({
+      url: '../review/index'
+    })
+  },
   /**
    * 用户点击右上角分享
    */
