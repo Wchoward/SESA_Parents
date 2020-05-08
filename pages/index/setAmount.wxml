@@ -1,0 +1,8 @@
+<!--pages/index/setAmount.wxml-->
+<view>
+  新卡片/天：
+  <input placeholder="请输入数量" type="number" class="set"></input>
+  最大复习量/天：
+  <input placeholder="请输入数量" type="number" class="set"></input>
+  <button style="top:70px">确认</button>
+</view>

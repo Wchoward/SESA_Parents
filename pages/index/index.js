@@ -7,7 +7,11 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    word:[
+      "abandon",
+      "a"
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -42,6 +46,41 @@ Page({
         }
       })
     }
+  },
+  gotoPageRevise: function(param){
+    wx.navigateTo({
+      url: '/pages/index/revise',
+    })
+  },
+  gotoPageSetAmount: function(param){
+    wx.navigateTo({
+      url: '/pages/index/setAmount',
+    })
+  },
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
+  },
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
+    // getList(this);
+  },
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
+    // getList(this);
+  },
+  inputTyping: function (e) {
+    //搜索数据
+    // getList(this, e.detail.value);
+    this.setData({
+      inputVal: e.detail.value
+    });
   },
   getUserInfo: function(e) {
     console.log(e)

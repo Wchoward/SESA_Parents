@@ -6,6 +6,8 @@
     "pages/check/index",
     "pages/profile/profile",
     "pages/login/index"
+    "pages/index/revise",
+    "pages/index/setAmount"
   ],
   "window": {
     "backgroundTextStyle": "light",
