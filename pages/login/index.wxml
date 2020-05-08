@@ -7,7 +7,7 @@
     </view>
     <view class="fun-btns">
         <text>账号</text>
-        <input bindinput="inputNum" placeholder = "请输入账号" value="{{account}}"/>
+        <input bindinput="inputNum" value="{{account}}"/>
     </view>
     <view class="fun-btns">
         <text>密码</text>
