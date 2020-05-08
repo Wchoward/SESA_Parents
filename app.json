@@ -5,7 +5,7 @@
     "pages/comment/index",
     "pages/check/index",
     "pages/profile/profile",
-    "pages/login/index"
+    "pages/login/index",
     "pages/index/revise",
     "pages/index/setAmount"
   ],
