@@ -1,8 +1,53 @@
-/* pages/check/index.wxss */
-.hint{
-  font-size: large;
+/* pages/daka/daka.wxss */
+page{
+  height:100%;
+}
+.background {
+  display: absolute;  
+  width: 100%;
+  height: 100%;
+  background-size:100% 100%;
+  z-index: -1;
+}
+.headshot{
+  padding-top: 10%;
+  padding-left: 10%;
+}
+.avatar{   
+  display: flex;  
+  height: 80px;    
+  width: 80px;    
+  border-radius: 40px;
+  position: absolute;
+  }
+.nameborder{
+  padding-top: -10%;
+  padding-left: 50%;
+}
+.name{
   display: flex;
-  align-items: center;
-  align-content: center;
-  color: #707070;
+  position: absolute; 
+  font-size: 40px;
+  color: #FFD989;
+}
+.content{
+  position: absolute; 
+  padding-top: 30%;
+  padding-left: 30%; 
+}
+.normal-word{
+  font-size: 20px;
+}
+.small-word{
+  font-size: 10px;
+}
+.big-word{
+  font-size: 40px;
+  color: #FCB284;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.button-view{
+  padding-top:125%; 
 }
