@@ -7,7 +7,8 @@
     "pages/profile/profile",
     "pages/login/index",
     "pages/index/revise",
-    "pages/index/setAmount"
+    "pages/index/setAmount",
+    "pages/review/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

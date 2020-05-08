@@ -300,7 +300,7 @@
 
 /*发表按钮*/
 .punch-card-diary-publish-btn {
-    width: 100rpx;
+    width: 90%;
     height: 100rpx;
     margin: 10rpx 10rpx 200rpx 10rpx;
     border-radius: 10rpx;

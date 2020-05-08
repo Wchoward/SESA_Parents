@@ -180,7 +180,7 @@
     <!--发表评论按钮-->
     <button class="punch-card-diary-publish-btn" type="primary"
             disabled="{{disabledPublishBtn}}" bindtap="publishDiary">
-        发表
+        打 卡
     </button>
 
 </view>
