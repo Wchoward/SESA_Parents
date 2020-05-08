@@ -1,0 +1,49 @@
+/* pages/comment/index.wxss */
+.container-login{
+    display: flex;
+    flex-direction: column;
+}
+.fun-btns{
+  display: flex;
+  flex-direction: row;
+  padding:25rpx;
+  border-bottom: 0.3px #cbcbcb solid;
+  justify-content: space-between;
+  color: #707070;
+}
+/* .banner{
+    display: flex;
+} */
+.item-icon{
+  width: 10%;
+}
+#comment-btn{
+  width:90%;
+  margin-top: 20rpx;
+  background-color: #e1c686;
+  color: white;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+textarea{
+  width: 100%;
+  padding-right: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+
+#word-count{
+  display: flex;
+  flex-direction: row-reverse;
+  padding:35rpx;
+  color: #cbcbcb
+}
+.uploadway{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}

@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+        "pages/comment/index",
     "pages/browse/index",
     "pages/index/index",
     "pages/check/index",
@@ -17,7 +17,7 @@
     "color": "#8a8a8a",
     "selectedColor": "#ce9637",
     "list": [{
-      "pagePath": "pages/index/index",
+      "pagePath": "pages/comment/index",
       "text": "闪卡",
       "iconPath": "icons/flash.png",
       "selectedIconPath": "icons/flash-st.png"
