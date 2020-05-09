@@ -1,5 +1,40 @@
 <!--pages/browse/index.wxml-->
-<navbar></navbar>
-<view class="container">
-    <view class="hint">查看教练点评页</view>
+<view class="nav-tab">
+        <button class="tab-btn {{currTab === 0 ? 'active':''}}" id="all" bindtap="activeTab">
+        班 组
+        </button>
+        <button class="tab-btn {{currTab === 1 ? 'active':''}}" id="self" bindtap="activeTab">
+        个 人
+        </button>
+    </view >
+<scroll-view scroll-y = "true" enable-flex="true" class = "container">
+  <view class="info_block" wx:for="{{check_lst}}"  wx:for-item="i">
+    <view class="usr_info">
+        <view class='info1'>
+            <view class="avatar">
+                <image class="userinfo-avatar" src="{{i.usr_avatar}}" mode="cover"></image>
+                <text class="userinfo-nickname">{{i.usr_name}}</text>
+            </view>
+            <view class="create_time">
+                <text>{{i.create_time}}</text>
+            </view>
+        </view>
+        <view class="detail">
+            <image class="item-icon" src="../../icons/right.png" mode="cover"></image>
+        </view>
+    </view>
+    <view class="item" wx:for="{{i.task_lst}}"  wx:for-item="j">
+        <image class="item-icon" src="../../icons/finish.png" mode="cover"></image>
+        <text class="item-text">完成了{{j.time}}分钟的{{j.content}}</text>
+    </view>
+    <view class="c-text">
+        <text class="title" id="p-text">家长自评</text>
+        <text class="comments">{{i.self_comment}}</text>
+    </view>
+    <view class="c-text" id="t-text">
+        <text class="title">教练评价</text>
+        <text class="comments">{{i.instruction}}</text>
+    </view>
+    <button class="comment" bindtap="go_comment">评 论</button>
 </view>
+</scroll-view>

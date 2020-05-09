@@ -44,10 +44,9 @@ Page({
       hasUserInfo: true
     })
   },
-  // 跳转打卡界面
-  daka:function() {
+  login:function(){
     wx.navigateTo({
-      url: '../check/index'
+      url: '../login/index'
     })
   }
 })

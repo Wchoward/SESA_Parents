@@ -1,0 +1,16 @@
+<!--pages/comment/index.wxml-->
+<navbar></navbar>
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入点评内容，最多输入10000字" name="textarea" bindinput="bindWordLimit" auto-focus/>
+    <text id="word-count">{{currentNoteLen|0}}/{{noteMaxLen}}</text>
+      <view class="uploadway">
+        <image class="item-icon" src="../../icons/sound.png" mode="aspectFit"></image>
+        <image class="item-icon" src="../../icons/video.png" mode="aspectFit"></image>
+        <image class="item-icon" src="../../icons/picture_2.png" mode="aspectFit"></image>
+        <image class="item-icon" src="../../icons/file5.png" mode="aspectFit"></image>
+
+    </view>
+    <button id="comment-btn" form-type="submit"> 评 论 </button>
+  </form>
+</view>

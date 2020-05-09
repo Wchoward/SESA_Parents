@@ -1,0 +1,35 @@
+/* pages/login/index.wxss */
+.container-login{
+    display: flex;
+    flex-direction: column;
+}
+.fun-btns{
+  display: flex;
+  flex-direction: row;
+  padding:25rpx;
+  border-bottom: 0.3px #cbcbcb solid;
+  justify-content: space-between;
+  color: #707070;
+}
+/* .banner{
+    display: flex;
+} */
+.img{
+    width: 100%;
+}
+#login-btn{
+  width:60%;
+  margin-top: 20rpx;
+  background-color: #e1c686;
+  color: white;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+input{
+    width: 80%;
+    padding-right: 20rpx;
+}
+button::after {
+  border: none;
+}

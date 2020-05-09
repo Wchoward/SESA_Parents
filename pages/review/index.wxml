@@ -1,0 +1,186 @@
+<!--suppress ALL -->
+<view class="container">
+    <!--文本内容编辑区域-->
+    <view class="text-content-edit-area">
+        <textarea placeholder="请输入点评内容，最多输入500字" auto-height="{{true}}"
+                  adjust-position="{{true}}" show-confirm-bar="{{false}}"
+                  placeholder-class="edit-diary-notice" maxlength="500"
+                  bindinput="editTextContent">
+        </textarea>
+        <view class="text-content-num-notice">
+            {{textContentLength}}/500
+        </view>
+    </view>
+
+    <!--音频录制控制按钮视图-->
+    <view class="audio-record-view" hidden="{{hiddenAudioRecordView}}">
+        <!--取消录音按钮-->
+        <image class="cancel-audio-record" src="/icons/close_red.png"
+               bindtap="cancelAudioRecord">
+        </image>
+
+        <view class="separator-line"></view>
+
+        <!--录音时间动画-->
+        <bolck wx:if="{{showPauseAudioRecordBtn}}">
+            <!--正在录音 显示录音进行中的闪烁动画-->
+            <view class="time-animation recording"></view>
+        </bolck>
+        <block wx:else>
+            <!--录音暂停 不显示闪烁动画-->
+            <view class="time-animation record-pause"></view>
+        </block>
+
+        <!--录音时间计数-->
+        <view class="time-count">{{min}}:{{sec}}</view>
+
+        <!--暂停&开始按钮-->
+        <block wx:if="{{showPauseAudioRecordBtn}}">
+            <!--正在录音 显示暂停按钮-->
+            <view class="audio-record-control-btn" bindtap="pauseAudioRecord">
+                <image src="/icons/pause.png"
+                       style="width: 20px; height: 20px;">
+                </image>
+            </view>
+        </block>
+        <block wx:else>
+            <!--停止录音 显示继续录音按钮-->
+            <view class="audio-record-control-btn" bindtap="resumeAudioRecord">
+                <image src="/icons/start.png"></image>
+            </view>
+        </block>
+
+        <!--结束录音按钮-->
+        <view class="audio-record-end-btn" bindtap="endAudioRecord">完成</view>
+    </view>
+
+    <!--录音结束后 显示已录制好的音频播放视图-->
+    <block wx:if="{{showAudioPlayView}}">
+        <view class="audio-play-view">
+            <!--控制按钮区域-->
+            <view class="audio-control-btn-area">
+                <block wx:if="{{audioPlayStatus == 'pause'}}">
+                    <!--音频暂停播放中 显示播放按钮-->
+                    <view class="audio-control-btn" bindtap="startAudioPlay">
+                        <image src="/icons/audio_play.png"></image>
+                    </view>
+                </block>
+                <block wx:else>
+                    <!--音频播放中 显示暂停按钮-->
+                    <view class="audio-control-btn" bindtap="pauseAudioPlay">
+                        <image src="/icons/audio_pause.png"></image>
+                    </view>
+                </block>
+            </view>
+
+            <!--播放进度条区域-->
+            <view class="audio-play-progress-area">
+                <view class="audio-name">录音音频</view>
+                <view class="audio-play-progress">
+                    <!--音频当前播放时间-->
+                    <view class="audio-play-last-time">{{audioPlayCurrTimeStr}}</view>
+
+                    <!--音频播放进度条-->
+                    <view class="audio-play-progress-item">
+                        <slider max="{{audioPlayEndTime}}" value="{{audioPlayCurrTime}}"
+                                block-size="12">
+                        </slider>
+                    </view>
+                    <!--音频总时长-->
+                    <view class="audio-play-end-time">{{audioPlayEndTimeStr}}</view>
+                </view>
+            </view>
+
+            <!--取消该录音音频的上传按钮-->
+            <view class="cancel-audio-record-upload">
+                <image src="/icons/cancel_red.png"
+                       bindtap="cancelAudioRecordUpload">
+                </image>
+            </view>
+        </view>
+    </block>
+
+
+
+    <!--图片、音频、视频添加上传按钮-->
+    <view class="upload-btn-list">
+        <!--对选择的的图片进行预览-->
+        <block wx:for="{{chooseImg}}">
+            <view class="btn-list-item picture-item"
+                  bindtap="previewImage" id="{{item}}">
+                <image src="{{item}}" mode="aspectFill">
+                    <image src="../../icons/cancel.png"
+                           class="cancel-picture-upload-btn"
+                           data-index="{{index}}" catchtap="cancelPictureUpload">
+                    </image>
+                </image>
+            </view>
+        </block>
+    <!--对从聊天框选择的图片或视频进行预览-->
+        <block wx:for="{{chooseFle}}">
+            <view  wx:if="{{filetype==='image'}}" class="btn-list-item picture-item"
+                  bindtap="previewImage1" id="{{item}}">
+                <image src="{{item}}" mode="aspectFill">
+                    <image src="../../icons/cancel.png"
+                           class="cancel-picture-upload-btn"
+                           data-index="{{index}}" catchtap="cancelPictureUpload1">
+                    </image>
+                </image>
+            </view>
+            <view wx:if="{{filetype==='video'}}" class="btn-list-item picture-item"  >
+                <video src="{{item}}" muted="{{flase}}" bindvideoscreenchange="bindVideoScreenChange" >
+                    <image src="../../icons/cancel.png"
+                           class="cancel-picture-upload-btn"
+                           data-index="{{index}}" catchtap="cancelVedioUpload1">
+                    </image>
+                </video>
+            </view>
+        </block>
+
+        <!--对选择的的视频进行预览-->
+       
+        <block wx:for="{{chooseVid}}">
+             <view class="btn-list-item picture-item"  >
+                <video src="{{item}}" muted="{{flase}}" bindvideoscreenchange="bindVideoScreenChange" >
+                    <image src="../../icons/cancel.png"
+                           class="cancel-picture-upload-btn"
+                           data-index="{{index}}" catchtap="cancelVedioUpload">
+                    </image>
+                </video>
+            </view>
+        </block>
+
+        <!--图片添加按钮-->
+        <view class="btn-list-item picture-upload-btn" bindtap="chooseImage">
+            <image src="../../icons/picture_2.png">
+            </image>
+        </view>
+
+        <!--音频添加按钮-->
+        <view class="btn-list-item sound-upload-btn" bindtap="startAudioRecord"
+              hidden="{{hiddenAddAudioBtn}}">
+            <image src="../../icons/sound.png">
+            </image>
+        </view>
+
+        <!--视频添加按钮-->
+        <view class="btn-list-item video-upload-btn" bindtap="chooseVideo">
+            <image src="../../icons/video.png">
+            </image>
+        </view>
+
+        <!--文件添加按钮-->
+        <view class="btn-list-item file-upload-btn" bindtap="chooseFile">
+            <image src="../../icons/file5.png">
+            </image>
+        </view>
+    </view>
+
+   
+    <!--发表评论按钮-->
+    <button class="punch-card-diary-publish-btn" type="primary"
+            disabled="{{disabledPublishBtn}}" bindtap="publishDiary">
+        打 卡
+    </button>
+
+</view>

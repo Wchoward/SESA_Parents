@@ -9,10 +9,10 @@
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
+  width: 160rpx;
+  height: 160rpx;
   margin: 20rpx;
-  border-radius: 50%;
+  padding-top: 30rpx;
 }
 
 .userinfo-nickname {
@@ -40,8 +40,8 @@
 }
 #login-btn{
   width:auto;
-  margin-top: 40rpx;
-  background-color: #ce9637;
+  margin-top: 20rpx;
+  background-color: #e1c686;
   color: white;
   font-size: 30rpx;
   margin-bottom: 20rpx;
@@ -49,4 +49,8 @@
 #next{
   width: 12px;
   height: 12px;
+}
+
+button::after {
+  border: none;
 }
