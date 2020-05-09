@@ -32,7 +32,7 @@
     <view class="amount_text" decode="{{true}}">共{{word.length}}词</view> 
     <!-- <text>点击设置复习量</text> -->
   </button>
-  <button style="width: 30%; height: 100%" bindtap="gotoPageRevise">
+  <button class="review_button" bindtap="gotoPageRevise">
     <view class="reverse_text">复习</view>
   </button>
 </view>
